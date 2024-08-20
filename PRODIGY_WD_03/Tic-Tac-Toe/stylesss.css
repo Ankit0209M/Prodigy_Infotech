@@ -1,0 +1,100 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('bbb.jpeg') no-repeat center center/cover;
+    color: white;
+}
+
+.game-container {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    width: 400px;
+    animation: fadeIn 1s ease-in-out;
+    
+}
+
+.game-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+    
+}
+
+.cell {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #fff;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffcc00;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+.cell:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.cell.active {
+    transform: scale(1.2);
+}
+
+.game-info {
+    margin-top: 20px;
+}
+
+#status {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#restartBtn {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+#restartBtn:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
